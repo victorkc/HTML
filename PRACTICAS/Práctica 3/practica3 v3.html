@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<hmtl>
+	<head>
+		<title> Página con párrafos con ID</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet"
+			  type="text/css" 
+			  href="css/CSS.css">
+
+		<script type="text/javascript">
+
+			function Aciertos(idRespuesta,idImagen) {
+				var p;
+
+				p = document.getElementById(idRespuesta);
+				p.style.color = "Red";
+				p = document.getElementById('aciertos');
+				p.innerHTML += "0";
+				imagen = document.getElementById(idImagen);
+				imagen.src = "../images/pulgarAbajo.png";
+			}
+
+			function Errores(idRespuesta,idImagen) {
+				var p;
+
+				p = document.getElementById(idRespuesta);
+				p.style.color = "Red";
+				p = document.getElementById('aciertos');
+				p.innerHTML += "0";
+				imagen = document.getElementById(idImagen);
+				imagen.src = "../images/pulgarAbajo.png";
+			}
+
+		</script>
+
+
+
+	</head>
+	<body>
+
+	<p class="intro">
+		Adivina la película haciendo click en el nombre que creas correcto. 
+	</p>
+		<p class="pregunta" id="parrafo1" align="center">
+			Qué peli es? Buscando a Memo o Los vengadores?
+		</p>
+
+		<img id="imagen1"
+	 		 src="image/vengadores.png" align="left">
+	 	<p id="respuesta1" class="Margen" onclick="Errores(respuesta1,imagen1)">
+	 		Buscando a Memo
+	 	</p>
+	 	<p id="respuesta2" class="Margen" onclick="Aciertos(respuesta2,imagen1)">
+	 		Los vengadores
+	 	</p>
+	 	<br clear="both">
+		<p class="pregunta" id="parrafo1" align="center">
+			Qué peli es? Los X-men o Heidi?
+		</p>
+		<img id="imagen2" 
+			 src="image/xmen.png" align="left">
+
+		<p id="respuesta3" class="Margen" onclick="Aciertos(respuesta3,imagen2)">
+			Los X-men
+		</p>
+		<p id="respuesta4" class="Margen" onclick="Errores(respuesta4,imagen2)">
+			Heidi
+		</p>
+
+			<br clear="both">
+			 <p class="aciertos">
+			 	ACIERTOS: 
+			 </p>
+	</body>
+</hmtl>
+

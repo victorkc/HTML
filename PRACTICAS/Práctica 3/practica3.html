@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<hmtl>
+	<head>
+		<title> Página con párrafos con ID</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet"
+			  type="text/css" 
+			  href="css/CSS.css">
+
+		<script type="text/javascript">
+			function Error() {
+				var p;
+
+				p = document.getElementById('respuesta1');
+				p.style.color = "Red";
+				p = document.getElementById('aciertos');
+				p.innerHTML += "0";
+				imagen = document.getElementById('imagen1');
+				imagen.src = "../images/pulgarAbajo.png";
+			}
+			function Error1() {
+				var p;
+
+				p = document.getElementById('respuesta4');
+				p.style.color = "Red";
+				p = document.getElementById('aciertos');
+				p.innerHTML += "0";
+				imagen = document.getElementById('imagen2');
+				imagen.src = "../images/pulgarAbajo.png";
+			}
+			function Acierto() {
+				var p;
+
+				p = document.getElementById('respuesta2');
+				p.style.color = "Green";
+				p = document.getElementById('aciertos');
+				p.innerHTML += "1";
+				imagen = document.getElementById('imagen1');
+				imagen.src = "../images/pulgarArriba.png";
+			}
+			function Acierto1() {
+				var p;
+
+				p = document.getElementById('respuesta3');
+				p.style.color = "Green";
+				p = document.getElementById('aciertos');
+				p.innerHTML += "1";
+				imagen = document.getElementById('imagen2');
+				imagen.src = "../images/pulgarArriba.png";
+			}
+		</script>
+
+
+
+	</head>
+	<body>
+
+	<p id="intro">
+		Adivina la película haciendo click en el nombre que creas correcto. 
+	</p>
+		<p id="parrafo1" align="center">
+			Qué peli es? Buscando a Memo o Los vengadores?
+		</p>
+
+		<img id="imagen1"
+	 		 src="image/vengadores.png" align="left">
+	 	<p id="respuesta1" class="Margen" onclick="Error()">
+	 		Buscando a Memo
+	 	</p>
+	 	<p id="respuesta2" class="Margen" onclick="Acierto()">
+	 		Los vengadores
+	 	</p>
+	 	<br clear="both">
+		<p id="parrafo1" align="center">
+			Qué peli es? Los X-men o Heidi?
+		</p>
+		<img id="imagen2" 
+			 src="image/xmen.png" align="left">
+
+		<p id="respuesta3" class="Margen" onclick="Acierto1()">
+			Los X-men
+		</p>
+		<p id="respuesta4" class="Margen" onclick="Error1()">
+			Heidi
+		</p>
+
+			<br clear="both">
+			 <p id="aciertos">
+			 	ACIERTOS: 
+			 </p>
+	</body>
+</hmtl>
+

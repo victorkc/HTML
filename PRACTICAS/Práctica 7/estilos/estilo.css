@@ -1,0 +1,36 @@
+body{
+	background-color: #FFE6B5;
+}
+.cabezera{
+	background-color: #E4AD3F;
+text-align: center;
+}
+
+.centrar{
+	
+	margin: auto;
+
+}
+
+p{
+	font-size: 18px;
+}
+
+button{
+	text-align: center;
+	background-color: #ffcc66 /*Naranja clarito*/;
+	padding: 15px 32px;
+    text-align: center;
+    margin: 10px 5px;
+    /*display: inline-block;*/
+    font-size: 18px;
+}
+
+.operar{
+	margin-left: 55px;
+}
+
+img{
+	width: 200px; 
+	height: 200px;
+}

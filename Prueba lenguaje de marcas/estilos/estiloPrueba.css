@@ -1,0 +1,34 @@
+.imagenCabecera{
+	width: 100px;
+}
+
+.imagenJuego{
+	height: 60px;
+}
+
+.cabecera{
+	text-align: center;
+	font-size: 24px;
+	background-color: Gold;
+	padding: 1px;
+
+}
+
+.normas{
+	font-size: 20px;
+}
+
+.marcador{
+	background-color: orange;
+	text-align: right;
+	margin-right: 35cm;
+}
+
+.textoMarcador{
+	text-align: center;
+	margin-right: 35cm;
+}
+
+#juego{
+	font-size: 20px;
+}

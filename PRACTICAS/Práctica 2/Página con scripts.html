@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<hmtl>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			
+			function cambiarColor(color) {
+				document.body.style.backgroundColor = color;
+			}
+			function cambiarLetra(fuente) {
+				var p;
+				p = document.getElementById('parrafo');
+				p.style.fontSize = fuente;
+			}
+			
+		</script>
+	</head>
+	<body>
+	<p id="parrafo">
+	Texto de la web.
+		<img src="img/BRojo.png" onclick="cambiarColor('red')">
+		<img src="img/BVerde.png" onclick="cambiarColor('green')">	
+		<img src="img/BAzul.png" onclick="cambiarColor('blue')">
+	</p>		
+	<p onclick="cambiarLetra('40pt')"> Tamaño 40 </p>
+	<p onclick="cambiarLetra('30pt')"> Tamaño 30 </p>
+	<p onclick="cambiarLetra('20pt')"> Tamaño 20 </p>
+
+	</body>
+</hmtl>

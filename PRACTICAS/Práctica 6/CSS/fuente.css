@@ -1,0 +1,17 @@
+h1{
+	color: white;
+	background-color: red;
+	text-align: center; 
+}
+
+dt{
+	font-size: 14pt;
+	font-weight: bold;
+	text-decoration: underline;
+}
+dd{
+	font-size: 10pt;
+	color: blue;
+	font-style: oblique;
+
+}

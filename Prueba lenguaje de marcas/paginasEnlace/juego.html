@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<hmtl>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../estilos/estiloPrueba.css">
+		<script type="text/javascript" src="../javascript/funciones.js"></script>
+
+		
+	</head>
+	<body>
+		<div class="cabecera">
+		<p>
+			<img src="../imagenes/Limon.png"
+			align="middle"
+			class="imagenCabecera"> 
+			<a href="../Prueba.html">Inicio </a>
+			<a href="juego.html">Juego </a>  
+			<a href="acerca.html">Acerca de..</a> 
+		</p>
+		</div>
+		
+		<div id="juego">
+			<p>Juego</p>
+			<p>
+				<div class="textoMarcador">Marcador actual</div> 
+				<div class="marcador"
+				id="marcadorActual">0</div>
+				<div class="textoMarcador">Tirada actual</div>
+				<div class="marcador"
+				id="tiradaActual">0</div>
+			</p>
+
+			<div>
+				<img src="../imagenes/Fresa.png"
+				class="imagenJuego"
+				id="imagen1">
+				<img src="../imagenes/Limon.png"
+				class="imagenJuego"
+				id="imagen2">
+				<img src="../imagenes/Sandia.png"
+				class="imagenJuego"
+				id="imagen3">
+			</div>
+
+		</div>
+		<button>Reiniciar</button>
+		<button onclick="guardar()">Guardar tirada</button>
+		<button onclick="funcionJugar('imagen1', 'imagen2', 'imagen3')">Jugar</button><br>
+		<button onclick="funcionJuego('imagen1')">Cambiar 1</button>
+		<button onclick="funcionJuego('imagen2')">Cambiar 2</button>
+		<button onclick="funcionJuego('imagen3')">Cambiar 3</button>
+		
+		
+	</body>
+</hmtl>
+
