@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<hmtl>
+	<head>
+		<title> Página con párrafos con ID</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet"
+			  type="text/css" 
+			  href="estilos/estiloID.css">
+
+<script type="text/javascript">
+	function CambiarParrafo()
+	{
+		var p;
+		p = document.getElementById('parrafo1');
+		p.innerHTML += "Y VIENTO";
+	}
+</script>
+
+	</head>
+	<body>
+		<p id="parrafo1" align="center">
+			Dibujo de Ahri y Lux.
+		</p>
+
+	<img id="imagen1"
+	 src="images/ahri_and_lux.png"
+	 onclick="CambiarParrafo()">
+
+		<p id="parrafo2" align="center">
+			Imagen de Ahri recreativa.
+		</p>
+
+		<img id="imagen2" 
+			 src="images/Ahri_7.png">
+	</body>
+</hmtl>
+
