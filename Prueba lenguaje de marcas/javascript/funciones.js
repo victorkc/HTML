@@ -4,9 +4,6 @@ var2
 var3
 */
 var total = 0 //preguntar a txema, sin var no funciona, con var funciona, y al quitar después var, sigue funcionando
-primeraImagen
-segundaImagen
-terceraImagen
 resultado
 
 var var1
@@ -53,9 +50,6 @@ for (var i = 1; i < 4; i++) {
 
 function chekeoSolo() {
 	//si al cambiar alguna imagen, coinciden 2, poner 500 puntos, si son 3, entonces 1000.
-	primeraImagen = 0
-	segundaImagen = 0
-	terceraImagen = 0
 
 	if(imagen1.src == "../imagenes/Fresa.png")
 		var1 = 1
@@ -78,15 +72,15 @@ function chekeoSolo() {
 	if(imagen3.src == "../imagenes/Sandia.png")
 		var3 = 3
 
+	a = document.getElementById('marcadorActual')
+
+	a.innerHTML = var1
+
 	checkeoPuntos()
 
 }
 
 function reiniciar() {
-
-	var1 = 1
-	var2 = 2
-	var3 = 3
 
 	imagen1.src = "../imagenes/Fresa.png"
 	imagen2.src = "../imagenes/Limon.png"
@@ -111,7 +105,7 @@ function guardar() {
 }
 
 
-function funcionJuego(imagen){
+function funcionCambiar(imagen){
 
 	imagen = document.getElementById(imagen)
 
