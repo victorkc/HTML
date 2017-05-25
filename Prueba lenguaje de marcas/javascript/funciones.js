@@ -1,61 +1,5 @@
-var total = 0;
-var resultado;
 
-var var1 = 1;
-var var2 = 2;
-var var3 = 3;
-
-//preguntar a txema.
-
-var v1 = 0;
-var v2 = 0;
-var v3 = 0;
-
-var imagen1 = document.getElementById('imagen1');
-var imagen2 = document.getElementById('imagen2');
-var imagen3 = document.getElementById('imagen3');
-
-function chequeoImagenes(im1, im2, im3){
-	
-	i1 = document.getElementById('imagen1');
-	i2 = document.getElementById(im2);
-	i3 = document.getElementById(im3);
-
-	alert(i1);
-	
-
-	if (i1 == "../imagenes/Fresa.png")
-		v1 = 1;
-	else
-		if (i1 == "../imagenes/Limon.png")
-		v1 = 2;
-	else
-		if (i1 == "../imagenes/Sandia.png")
-		v1 = 3;
-
-	if (i2.src == "../imagenes/Fresa.png")
-		v2 = 1;
-	else
-		if (i2.src == "../imagenes/Limon.png")
-		v2 = 2;
-	else
-		if (i2.src == "../imagenes/Sandia.png")
-		v2 = 3;
-
-	if (i3.src == "../imagenes/Fresa.png")
-		v3 = 1;
-	else
-		if (i3.src == "../imagenes/Limon.png")
-		v3 = 2;
-	else
-		if (i3.src == "../imagenes/Sandia.png")
-		v3 = 3;
-
-p = document.getElementById('marcadorActual');
-p.innerHTML = 'valores ' + v1 + v2 + v3;
-chequeoPuntos();
-
-}
+var guardar_activado = true;
 
 function funcionCambiar(imagenJuego){
 	var op;
@@ -75,13 +19,11 @@ function funcionCambiar(imagenJuego){
 		imagen.src = "../imagenes/Sandia.png";
 	}
 	//a.innerHTML = op;	
-	chequeoImagenes();
+	chequeoPuntos();
+	guardar_activado = true;
 }
 
 function chequeoPuntos(){
-	var1 = v1;
-	var2 = v2;
-	var3 = v3;
 
 	milPuntos = 1000;
 	quinientos = 500;
@@ -89,27 +31,27 @@ function chequeoPuntos(){
 	resultado = 0;
 	p = document.getElementById('tiradaActual');
 
-for (var i = 1; i < 4; i++) {
-	if ((var1==i && var2==i)||
-	   (var2==i && var3==i)) {
-	   	resultado = quinientos;
-	   	p.innerHTML = resultado;
-	   	break;
-	}
-	else{
-		p = document.getElementById('tiradaActual');
-	   	p.innerHTML = cero;
-	}
-	}
-		
-	if ( ((var1==1) && (var2==1) && (var3==1)) || 
-	     ((var1==2) && (var2==2) && (var3==2)) || 
-	     ((var1==3) && (var2==3) && (var3==3))){
+	imagen1 = document.getElementById('imagen1');
+	imagen2 = document.getElementById('imagen2');
+	imagen3 = document.getElementById('imagen3');
 
+	if( (imagen1.src == imagen2.src)||
+		(imagen2.src == imagen3.src)||
+		(imagen2.src == imagen3.src))
+		p.innerHTML = quinientos;
+	
+	else
+		p.innerHTML = cero;
+
+	if((imagen1.src == imagen2.src) && (imagen2.src == imagen3.src))
+		p.innerHTML = milPuntos;
+	
+/*
 		p = document.getElementById('tiradaActual');
 		resultado = milPuntos;
 		p.innerHTML = resultado;
-	}
+	*/
+
 }
 
 function funcionJugar(img1, img2, img3){
@@ -153,7 +95,7 @@ function funcionJugar(img1, img2, img3){
 	}
 //Debajo está definido el puntaje.
 	chequeoPuntos();
-
+	guardar_activado = true;
 }
 
 function reiniciar() {
@@ -168,15 +110,21 @@ function reiniciar() {
 	a.innerHTML = 0;
 	total = 0;
 	resultado = 0;
+	guardar_activado = true;
 	
 }
 
 function guardar() {
-	a = document.getElementById('marcadorActual');
+	total = document.getElementById('marcadorActual');
+	actual = document.getElementById('tiradaActual');
+	
+	if (guardar_activado){
+	suma = parseInt(total.innerHTML);
+	suma += parseInt(actual.innerHTML);
 
-	total += resultado ;
 	//alert('a')
-	a.innerHTML = total;
-	resultado = 0;
+	total.innerHTML = suma;
+	guardar_activado = false;
+}
 }
 
